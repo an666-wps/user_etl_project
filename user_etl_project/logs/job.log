@@ -1,0 +1,91 @@
+2026-07-13 ETL start
+login count=3
+ETL finish
+2026-07-14 ETL start
+login count=3
+ETL finish
+2026-07-24 ETL start
+login_count=3
+2026-07-24 ETL finish
+2026-07-14 data file not exist
+2026-07-14 ETL start
+2026-07-14 login_count=3
+2026-07-14 ETL finish
+2026-07-15 data file not exist
+2026-07-15 data file not exist
+2026-07-15 ETL start
+date=2026-07-15
+login_count=3
+buy_count=2
+view_count=0
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=3
+buy_count=2
+view_count=0
+2026-07-15 ETL finish
+2026-07-15 data file not exist
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=1
+buy_count=0
+view_count=0
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=1
+buy_count=0
+view_count=0
+buyer_count=0
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=2
+buy_count=4
+view_count=2
+buyer_count=3
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=1
+buy_count=4
+view_count=2
+buyer_count=3
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=1
+buy_count=4
+view_count=2
+buyer_count=3
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=1
+buy_count=4
+view_count=2
+buyer_count=3
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=0
+buy_count=4
+view_count=2
+buyer_count=0
+2026-07-15 ETL finish
+2026-07-15 ETL start
+date=2026-07-15
+login_count=2
+dau_count=1
+buy_count=4
+view_count=2
+buyer_count=1
+2026-07-15 ETL finish

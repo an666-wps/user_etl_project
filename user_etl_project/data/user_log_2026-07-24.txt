@@ -1,0 +1,6 @@
+2026-07-24 10:01 user001 login item001
+2026-07-24 10:02 user001 login item002
+2026-07-24 10:03 user002 login item003
+2026-07-24 10:04 user003 buy item004
+2026-07-24 10:05 user002 view item005
+2026-07-24 10:06 user003 login item006
