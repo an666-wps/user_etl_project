@@ -1,10 +1,11 @@
-CREATE TABLE dwd_user_behavior
+CREATE TABLE IF NOT EXISTS dws_user_behavior
 (
-    user_id STRING,
-    event_time STRING,
-    action STRING,
-    item_id STRING
+    login_count int,
+    buy_count int,
+    view_count int,
+    buyer_count int
 )
-PARTITIONED BY (dt STRING)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ',';
+PARTITIONED BY
+(
+    dt string
+);

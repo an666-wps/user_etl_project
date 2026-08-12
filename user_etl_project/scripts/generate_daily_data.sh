@@ -26,16 +26,17 @@ mkdir -p "$dwd_dir"
 
 
 # 生成模拟数据
-echo "user_id,event_time,action" > "$data_file"
+echo "user_id,event_time,action,item_id" > "$data_file"
 
-echo "u001,${date} 08:10:00,login" >> "$data_file"
-echo "u001,${date} 08:20:00,view" >> "$data_file"
-echo "u001,${date} 09:00:00,buy" >> "$data_file"
-echo "u002,${date} 09:30:00,login" >> "$data_file"
-echo "u002,${date} 10:00:00,view" >> "$data_file"
-echo "u002,${date} 11:00:00,buy" >> "$data_file"
-echo "u003,${date} 12:00:00,buy" >> "$data_file"
+echo "u001,${date} 08:10:00,login,item001" >> "$data_file"
+echo "u001,${date} 08:20:00,view,item001" >> "$data_file"
+echo "u001,${date} 09:00:00,buy,item001" >> "$data_file"
 
+echo "u002,${date} 09:30:00,login,item002" >> "$data_file"
+echo "u002,${date} 10:00:00,view,item002" >> "$data_file"
+echo "u002,${date} 11:00:00,buy,item002" >> "$data_file"
+
+echo "u003,${date} 12:00:00,buy,item003" >> "$data_file"
 
 echo "${date} DWD data generated:"
 echo "$data_file"
