@@ -1,4 +1,4 @@
-# 用户行为数据离线ETL项目
+# 基于Hive的用户行为离线数仓项目
 
 ## 项目简介
 
@@ -25,7 +25,7 @@ DWD明细层、DWS汇总层到ADS报表层的数据仓库建设流程。
 
 ```
 用户行为日志数据
-(user_behavior.csv)
+(txt原始日志)
 
         |
         ↓
@@ -117,6 +117,7 @@ dwd_user_behavior_detail
 |event_time|行为时间|
 |action|行为类型|
 |dt|日期分区|
+|item_id|行为id|
 
 
 支持按照日期进行分区管理：
@@ -140,7 +141,7 @@ dws_user_behavior
 
 ### 功能
 
-按照用户粒度进行行为统计。
+按照日期粒度进行行为统计。
 
 
 ### 统计指标
@@ -150,8 +151,8 @@ dws_user_behavior
 |login_count|登录次数|
 |view_count|浏览次数|
 |buy_count|购买次数|
-|user_id|用户ID|
-
+|buyer_count|购买用户数|
+|dt|统计日期|
 
 
 ---
@@ -320,7 +321,13 @@ from ads_user_behavior_report;
 - 实现Hive分区表管理
 - 使用Crontab完成任务调度
 - 完成用户行为指标统计分析
+## Hive分区设计
 
+DWD、DWS、ADS表均采用日期分区：
+
+dt=yyyy-MM-dd
+
+通过日期分区降低查询扫描数据量，提高查询效率。
 
 
 # 后续优化方向
