@@ -1,3 +1,4 @@
+USE user_dw;
 CREATE TABLE dws_user_behavior
 (
     user_id string,

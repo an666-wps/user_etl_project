@@ -26,7 +26,7 @@ mkdir -p "$dwd_dir"
 
 
 # 生成模拟数据
-echo "user_id,event_time,action,item_id" > "$data_file"
+
 
 echo "u001,${date} 08:10:00,login,item001" >> "$data_file"
 echo "u001,${date} 08:20:00,view,item001" >> "$data_file"

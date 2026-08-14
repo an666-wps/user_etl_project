@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+
+  hive_mysql:
+    image: mysql:5.7
+    container_name: hive_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: metastore
+      MYSQL_USER: hive
+      MYSQL_PASSWORD: hive
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+
+  hive_server:
+    image: apache/hive:4.0.0
+    container_name: hive_server
+    depends_on:
+      - hive_mysql
+    ports:
+      - "10000:10000"
+      - "10002:10002"
+    environment:
+      SERVICE_NAME: hiveserver2
+    volumes:
+      - ./hive_env:/opt/hive_env
+
+
+volumes:
+  mysql_data:
