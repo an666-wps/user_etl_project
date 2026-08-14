@@ -19,6 +19,8 @@ dwd_dir="${base_dir}/dwd/user_behavior_detail/dt=${date}"
 
 # 数据文件
 data_file="${dwd_dir}/user_behavior_detail.csv"
+# 清空历史生成文件，保证每日重新生成
+rm -f "$data_file"
 
 
 # 创建目录

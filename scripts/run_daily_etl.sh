@@ -59,11 +59,12 @@ fi
 
 log "${date} cleaning Hive DWD partition"
 
-docker exec "$HIVE_CONTAINER" \
-    beeline -u jdbc:hive2://localhost:10000 -n root \
-    -e "USE ${HIVE_DB};
-        ALTER TABLE dwd_user_behavior_detail
-        DROP IF EXISTS PARTITION(dt='${date}');"
+docker exec "$HIVE_CONTAINER" beeline \
+-u jdbc:hive2://localhost:10000 \
+-n root \
+-e "USE ${HIVE_DB};
+ALTER TABLE dwd_user_behavior_detail
+DROP IF EXISTS PARTITION(dt='${date}');"
 
 if [ $? -ne 0 ]; then
     log "${date} DWD partition cleanup failed"
